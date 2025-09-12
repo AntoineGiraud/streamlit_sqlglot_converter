@@ -8,3 +8,6 @@ dependencies = [
     "sqlglot[rs]>=27.14.0",
     "streamlit>=1.49.1",
 ]
+
+[tool.ruff]
+line-length = 120
