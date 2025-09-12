@@ -41,7 +41,7 @@ with col2:
 sql_input = st.text_area("Paste your SQL here:", height=200, key="sql_input")
 
 # Conversion button
-if st.button("Convert 🚀") and sql_input.strip():
+if st.button("Convert 🚀", type="primary") and sql_input.strip():
     # 1️⃣ Parse in the source dialect
     expr = parse_one(sql_input, read=src_dialect.lower())
 
