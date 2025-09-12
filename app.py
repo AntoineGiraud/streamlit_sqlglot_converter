@@ -7,8 +7,10 @@ from pathlib import Path
 DIALECTS = sorted(dialect for dialect in dialects.DIALECTS)
 DIALECTS_lower = [dialect.lower() for dialect in DIALECTS]
 
-st.set_page_config(page_title="SQL Dialect Converter", page_icon="🔄")
-st.title("🔄 SQL Dialect Converter")
+st.set_page_config(page_title="SQLGlot Dialect Converter", page_icon="🔄")
+st.title("🔄 SQLGlot Dialect Converter")
+
+st.info("[SQLGlot](https://github.com/tobymao/sqlglot) is a SQL parsing, conversion, and optimization.")
 
 # Two columns for the selectors
 col1, col2 = st.columns(2)

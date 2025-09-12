@@ -1,7 +1,9 @@
-# SQL Dialect Converter
+# SQLGlot Dialect Converter
 
 This tool allows you to **convert SQL queries from one dialect to another** and, if desired, **automatically optimize** their structure.  
 It is particularly useful for data teams that need to migrate or standardize SQL scripts across different engines (e.g., TSQL → DuckDB) while maintaining code readability and consistency.
+
+👉 [sqlglot-converter.streamlit.app](https://sqlglot-converter.streamlit.app/)
 
 ## 🚀 Technologies Used
 
@@ -24,6 +26,8 @@ uv run streamlit run app.py
 - Simple and responsive interface
 
 ## 📷 Rendering
+
+👉 [sqlglot-converter.streamlit.app](https://sqlglot-converter.streamlit.app/)
 
 ![capture_sql_converter](./capture_sql_converter.png)
 
