@@ -1,7 +1,10 @@
 {
-  "name": "Python 3",
+  "name": "uv python 3.12",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "ghcr.io/astral-sh/uv:python3.12-alpine",
+  "image": "ghcr.io/astral-sh/uv:bookworm-slim",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {}
+	},
   "customizations": {
     "codespaces": {
       "openFiles": [
@@ -10,23 +13,24 @@
       ]
     },
     "vscode": {
-      "settings": {},
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "files.autoSave": "afterDelay"
+      },
       "extensions": [
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "mechatroner.rainbow-csv",
+        "yzhang.markdown-all-in-one",
+        "tamasfe.even-better-toml",
+        "mhutchie.git-graph"
       ]
     }
   },
   "updateContentCommand": "uv sync; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
-    "server": "uv run streamlit run app.py"
   },
-  "portsAttributes": {
-    "8501": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
-    }
-  },
-  "forwardPorts": [
-    8501
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
   ]
 }
